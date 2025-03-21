@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-scale': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' }
+				},
+				'color-transition': {
+					'0%': { backgroundColor: 'rgba(255, 255, 255, 0.8)' },
+					'100%': { backgroundColor: 'rgba(134, 239, 172, 1)' }
+				},
+				'color-sequence': {
+					'0%': { backgroundColor: 'rgba(134, 239, 172, 1)' },
+					'100%': { backgroundColor: 'rgba(251, 146, 60, 1)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-scale': 'pulse-scale 2s infinite',
+				'color-transition': 'color-transition 0.3s forwards',
+				'color-sequence': 'color-sequence 0.5s forwards',
+				'fade-in': 'fade-in 0.6s ease-out'
 			}
 		}
 	},

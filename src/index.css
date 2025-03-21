@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,38 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .matrix-box {
+    @apply bg-white/80 backdrop-blur-sm w-24 h-24 sm:w-32 sm:h-32 rounded-xl flex items-center justify-center cursor-pointer shadow-sm border border-gray-100;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .matrix-box:hover {
+    @apply shadow-md transform -translate-y-1;
+  }
+  
+  .matrix-box:active {
+    @apply transform scale-95;
+  }
+  
+  .matrix-container {
+    background-image: linear-gradient(to right, #f8f9fa, #f1f3f5);
+  }
+
+  .reset-button {
+    @apply px-6 py-3 rounded-full bg-white text-gray-800 font-medium shadow-sm border border-gray-200;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .reset-button:hover {
+    @apply shadow-md transform -translate-y-1;
+  }
+  
+  .reset-button:active {
+    @apply transform scale-95;
   }
 }
