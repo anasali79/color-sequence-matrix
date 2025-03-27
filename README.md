@@ -22,8 +22,3 @@ npm i
 
 # Start the development server
 npm run dev
-```
-
-## Deployment
-
-You can deploy this project to any static site hosting service like Netlify, Vercel, GitHub Pages, etc.
